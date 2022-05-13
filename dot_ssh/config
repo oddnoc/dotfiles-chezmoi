@@ -1,0 +1,10 @@
+host *
+	compression no
+	IdentityFile ~/.ssh/id_ed25519
+	ServerAliveInterval 60
+	# http://web.archive.org/web/20150212211212/http://protempore.net/~calvins/howto/ssh-connection-sharing/
+	ControlMaster auto
+	ControlPath ~/.ssh/m/ssh-%r@%h:%p
+	PreferredAuthentications publickey,keyboard-interactive,password
+#	VisualHostKey yes
+

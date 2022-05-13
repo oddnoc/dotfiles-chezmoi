@@ -1,0 +1,4 @@
+if w --libxo dtrt,text,pretty $USER | grep $(echo $TTY | sed -e 's/\/dev\///;') | grep mosh > /dev/null 2>&1; then
+    [ -f /var/run/motd ] && cat /var/run/motd
+fi
+[ -x /usr/bin/fortune ] && /usr/bin/fortune freebsd-tips
